@@ -25,9 +25,10 @@ const posts=[];
 
 
 app.get("/",function(req,res){
- // res.render("home",{startingContent:homeStartingContent})
- res.render("home",{startingContent:posts})
-  console.log(posts)
+ res.render("home",{
+   startingContent:homeStartingContent,
+   posts:posts
+  });
 });
 app.get("/about",function(req,res){
   res.render("about",{about:aboutContent})
